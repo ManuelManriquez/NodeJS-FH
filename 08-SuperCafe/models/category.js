@@ -1,6 +1,9 @@
-const {Schema, model} = require('mongoose');
+const { Schema, model } = require("mongoose");
+const mongoose = require("mongoose");
 
-categorySchema = new Schema({
-    nombre: String,
-    user: mongoose.ObjectId
-})
+const categorySchema = new Schema({
+  name: String,
+  user: mongoose.ObjectId,
+});
+
+module.exports = model("category", categorySchema);
