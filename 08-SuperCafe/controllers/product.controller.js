@@ -24,7 +24,7 @@ const postProduct = async (req = request, res = response) => {
 };
 
 const putProduct = (req = request, res = response) => {
-  const product = Product.findOneAndUpdate(req.params.id, req.body);
+  const product = Product.findByIdAndUpdate(req.params.name, req.body);
   res.json({
     message: "PUT Product",
   });
